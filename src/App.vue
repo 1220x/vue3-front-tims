@@ -1,8 +1,8 @@
 <template>
-    <div id="app" class="common-layout">
+    <div class="common-layout height-full">
         <el-container>
             <el-header>XXX管理系统</el-header>
-            <el-container>
+            <el-container class="main-content">
                 <el-aside>
                     <el-menu>
                         <el-menu-item
@@ -44,13 +44,25 @@ function handleMenuClick(e, menuRouteName) {
 </script>
 
 <style lang="scss">
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body, #app {
+    width: 100%;
+    height: 100%;
+}
+
 .common-layout {
+    height: 100%;
     .el-header,
     .el-footer {
         background-color: #b3c0d1;
         color: #000;
         text-align: center;
         line-height: 60px;
+        flex-basis: 0 0 60px;
     }
 
     .el-footer {
@@ -82,6 +94,10 @@ function handleMenuClick(e, menuRouteName) {
 
     .el-container:nth-child(7) .el-aside {
         line-height: 320px;
+    }
+
+    .main-content {
+        height: calc(100vh - 120px);
     }
 }
 </style>
