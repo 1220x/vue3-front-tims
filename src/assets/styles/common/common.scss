@@ -1,0 +1,169 @@
+// 处理公共样式
+
+@function getSpace($num) {
+    @return $num * $space;
+}
+
+@for $i from 0 to 50 {
+    .p-#{$i} {
+        padding: getSpace($i) !important;
+    }
+    .pl-#{$i} {
+        padding-left: getSpace($i) !important;
+    }
+    .pr-#{$i} {
+        padding-right: getSpace($i) !important;
+    }
+    .pt-#{$i} {
+        padding-top: getSpace($i) !important;
+    }
+    .pb-#{$i} {
+        padding-bottom: getSpace($i) !important;
+    }
+    .px-#{$i} {
+        padding-left: getSpace($i) !important;
+        padding-right: getSpace($i) !important;
+    }
+    .py-#{$i} {
+        padding-top: getSpace($i) !important;
+        padding-bottom: getSpace($i) !important;
+    }
+    .m-#{$i} {
+        margin: getSpace($i) !important;
+    }
+    .ml-#{$i} {
+        margin-left: getSpace($i) !important;
+    }
+    .mr-#{$i} {
+        margin-right: getSpace($i) !important;
+    }
+    .mt-#{$i} {
+        margin-top: getSpace($i) !important;
+    }
+    .mb-#{$i} {
+        margin-bottom: getSpace($i) !important;
+    }
+    .mx-#{$i} {
+        margin-left: getSpace($i) !important;
+        margin-right: getSpace($i) !important;
+    }
+    .my-#{$i} {
+        margin-top: getSpace($i) !important;
+        margin-bottom: getSpace($i) !important;
+    }
+}
+
+@for $i from 6 to 32 {
+    .h-#{2*$i} {
+        font-size: $i * 2px;
+    }
+}
+
+@for $i from 6 to 32 {
+    .h-#{2*$i} {
+        font-size: $i * 2px;
+    }
+}
+
+.main-out {
+    height: 100% !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    overflow-y: auto !important;
+    background-color: #f5f5f5;
+}
+
+.pointer {
+    cursor: pointer;
+}
+.t-left {
+    text-align: left;
+}
+.t-center {
+    text-align: center;
+}
+.t-right {
+    text-align: right;
+}
+.v-middle {
+    vertical-align: middle;
+}
+.v-top {
+    vertical-align: top;
+}
+.v-baseline {
+    vertical-align: baseline;
+}
+.f-right {
+    float: right;
+}
+.f-left {
+    float: left;
+}
+
+.full {
+    width: 100%;
+}
+.half {
+    width: 50%;
+}
+
+.height-full {
+    height: 100%;
+}
+
+.relative {
+    position: relative;
+}
+.absolute {
+    position: absolute;
+}
+.fixed {
+    position: fixed;
+}
+.flex {
+    display: flex;
+}
+.flex-center {
+    display: flex;
+    align-items: center;
+}
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+.inline-block {
+    display: inline-block;
+}
+.dot-hidden {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.overflow-hidden {
+    overflow: hidden;
+}
+.overflow-auto {
+    overflow: auto;
+}
+.overflow-scroll {
+    overflow: scroll;
+}
+.x-hidden {
+    overflow-x: hidden;
+}
+.x-scroll {
+    overflow-x: scroll;
+}
+.x-auto {
+    overflow-x: auto;
+}
+.y-hidden {
+    overflow-y: hidden;
+}
+.y-scroll {
+    overflow-y: scroll;
+}
+.y-auto {
+    overflow-y: auto;
+}
